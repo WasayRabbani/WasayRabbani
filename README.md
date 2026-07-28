@@ -21,7 +21,7 @@ Final-year BSCS student @ COMSATS University Islamabad (Abbottabad Campus), buil
 
 ### 🌱 Currently learning / leveling up
 
-- Deepening my GenAI + Vision stack (fine-tunin)
+- Deepening my GenAI + Vision stack (fine-tuning)
 - Sharpening core CS fundamentals — DSA, System Design
 
 ---
@@ -45,7 +45,6 @@ Final-year BSCS student @ COMSATS University Islamabad (Abbottabad Campus), buil
 **Languages**  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=white)
 
 **Tools**  
 ![Groq](https://img.shields.io/badge/Groq%20API-F55036?style=flat-square)
