@@ -15,7 +15,7 @@ Final-year BSCS student @ COMSATS University Islamabad (Abbottabad Campus), buil
 
 ### 🔭 What I'm building
 
-**SignBridge** — Bidirectional sign language recognition & animation system. MediaPipe for landmark extraction → LSTM for gesture classification → GroqAPI-powered GlossMapper for natural language conversion. Flutter frontend + Flask backend.
+- **SignBridge** — Bidirectional sign language recognition & animation system. MediaPipe for landmark extraction → LSTM for gesture classification → GroqAPI-powered GlossMapper for natural language conversion. Flutter frontend + Flask backend.
 - **PPE Safety Detection** — Real-time workplace safety monitoring system built for a freelance client, detecting PPE compliance from live video feeds.
 - **LLM Code Evaluator** — An LLM-based system for automated code evaluation, delivered as a paid freelance project.
 
