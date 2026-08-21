@@ -19,11 +19,12 @@ Most AI portfolios are either pure computer vision or pure LLM work. I do both, 
 ### Proof of work
 
 **SignBridge — two-way sign language communication for hotel guests**  
-Deaf/mute hotel guests can't easily communicate with staff in real time. SignBridge closes that gap in both directions: MediaPipe Holistic extracts 144 hand/body landmarks per frame from live video, a BiLSTM classifies gesture sequences across 22 hospitality-specific signs in real time (96.96% test accuracy), and detected signs are segmented and assembled into full sentences — not just isolated word predictions. For replies, a Groq-powered LLaMA 3.1 model translates staff's free-text messages into vocabulary-constrained sign sequences, rendered as smooth 3D avatar animations. Flutter handles the guest/staff-facing UI, Flask serves the models, and the backend is containerized with Docker and deployed on Hugging Face Spaces.  
+Deaf/mute hotel guests can't easily communicate with staff in real time. SignBridge closes that gap in both directions: MediaPipe Holistic extracts 144 hand/body landmarks per frame from live video, a LSTM classifies gesture sequences across 22 hospitality-specific signs in real time (96.96% test accuracy), and detected signs are segmented and assembled into full sentences — not just isolated word predictions. For replies, a Groq-powered LLaMA 3.1 model translates staff's free-text messages into vocabulary-constrained sign sequences, rendered as smooth 3D avatar animations. Flutter handles the guest/staff-facing UI, Flask serves the models, and the backend is containerized with Docker and deployed on Hugging Face Spaces.  
 `Python` · `TensorFlow/Keras` · `MediaPipe Holistic` · `OpenCV` · `Flask` · `Flutter` · `Firebase` · `Groq (LLaMA 3.1)` · `Docker` · `Hugging Face Spaces`
 
-**Real-time safety & biometric monitoring (freelance project)**  
-A client was running PPE inspections manually. I fine-tuned YOLOv8 to autonomously detect PPE compliance and falls from a live video stream, then layered a C++ HOG-based biometric attendance system (`dlib`/`face_recognition`) directly on top of the same feed. The two systems share hardware resources without lag through an asynchronous daemon thread and a dynamic hardware-resource manager, and an in-memory RAM embedding cache gets facial authentication down to sub-30ms — eliminating the latency that typically comes with deep-learning-based recognition. Delivered and actively running in production for the client.  
+**Real-Time Safety & Biometric Monitoring (Freelance Project)**  
+A client was relying on slow, manual inspections to check if workers were wearing safety gear. To automate this, I trained an AI (YOLOv8) to instantly detect safety gear compliance and falls from a live video feed. On top of that, I added an ultra-fast facial recognition system to automatically track worker attendance using the exact same camera.
+To make this run smoothly without crashing or lagging, I built a smart resource manager that allows both systems to share the camera flawlessly. I also optimized the facial recognition to load worker data directly into the computer's RAM, dropping the face-scanning time to under 30 milliseconds—completely fixing the lag issues seen in heavier AI models. The system was successfully delivered and is currently running in production for the client. 
 `Python` · `YOLOv8` · `C++` · `dlib` · `face_recognition` · `OpenCV`
 
 **Automated code review that actually reads the code**  
@@ -40,11 +41,10 @@ I don't ship code I can't explain. Every project here I can walk through line by
 
 ### Stack
 
-**Vision:** YOLOv8 · OpenCV · MediaPipe Holistic · dlib · face_recognition  
+**Vision:** YOLOv8 · OpenCV · MediaPipe Holistic · Face_recognition  
 **Deep Learning / LLMs:** TensorFlow/Keras · PyTorch · BiLSTM · LLaMA-3 · QLoRA/Unsloth · Hugging Face  
-**Serving & Infra:** FastAPI · Flask · Docker · Hugging Face Spaces · Firebase  
-**Mobile:** Flutter  
-**Languages:** Python · C++ · Java · SQL
+**Serving & Infra:** FastAPI · Flask · Docker · Hugging Face Spaces
+**Languages:** Python · Java · SQL
 
 ---
 
