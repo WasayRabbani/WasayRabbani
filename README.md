@@ -1,75 +1,60 @@
-<h1 align="center">Hi, I'm Wasay Rabbani </h1>
-
-<h3 align="center">AI/ML Engineer | Computer Vision & GenAI</h3>
-
-<p align="center">
-Final-year BSCS student @ COMSATS University Islamabad (Abbottabad Campus), building real-world CV & LLM systems.
-</p>
+<h1 align="center">Wasay Rabbani</h1>
+<h3 align="center">I build systems that see and understand — Computer Vision + LLMs, in production</h3>
 
 <p align="center">
 <img src="https://komarev.com/ghpvc/?username=WasayRabbani&style=flat-square&color=blue" alt="profile views" />
 <img src="https://img.shields.io/badge/Status-Open%20to%20Work-brightgreen?style=flat-square" alt="open to work" />
 </p>
 
----
-
-### 🔭 What I'm building
-
-- **SignBridge** — Bidirectional sign language recognition & animation system. MediaPipe for landmark extraction → LSTM for gesture classification → GroqAPI-powered GlossMapper for natural language conversion. Flutter frontend + Flask backend.
-- **PPE Safety Detection** — Real-time workplace safety monitoring system built for a freelance client, detecting PPE compliance from live video feeds.
-- **LLM Code Evaluator** — An LLM-based system for automated code evaluation, delivered as a paid freelance project.
-
-### 🌱 Currently learning / leveling up
-
-- Deepening my GenAI + Vision stack (fine-tuning)
-- Sharpening core CS fundamentals — DSA, System Design
+<p align="center">
+🟢 Open to full-time AI/ML &amp; Computer Vision roles (internships included) &nbsp;|&nbsp; 🟢 Taking on freelance CV/LLM projects
+</p>
 
 ---
 
-### 🛠️ Tech Stack
+### What I do
 
-**Computer Vision**  
-![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=flat-square&logo=google&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=flat-square&logo=opencv&logoColor=white)
-![YOLO](https://img.shields.io/badge/YOLO-111F68?style=flat-square)
+Most AI portfolios are either pure computer vision or pure LLM work. I do both, and combine them — vision systems that don't just detect, but explain what they see, and respond, in natural language. That's a narrow but real skill set, and it's what the projects below are built on.
 
-**Deep Learning**  
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![LSTM](https://img.shields.io/badge/LSTM-4B0082?style=flat-square)
-![CNN](https://img.shields.io/badge/CNNs-4B0082?style=flat-square)
+### Proof of work
 
-**Backend & Mobile**  
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+**SignBridge — two-way sign language communication for hotel guests**  
+Deaf/mute hotel guests can't easily communicate with staff in real time. SignBridge closes that gap in both directions: MediaPipe Holistic extracts 144 hand/body landmarks per frame from live video, a BiLSTM classifies gesture sequences across 22 hospitality-specific signs in real time (96.96% test accuracy), and detected signs are segmented and assembled into full sentences — not just isolated word predictions. For replies, a Groq-powered LLaMA 3.1 model translates staff's free-text messages into vocabulary-constrained sign sequences, rendered as smooth 3D avatar animations. Flutter handles the guest/staff-facing UI, Flask serves the models, and the backend is containerized with Docker and deployed on Hugging Face Spaces.  
+`Python` · `TensorFlow/Keras` · `MediaPipe Holistic` · `OpenCV` · `Flask` · `Flutter` · `Firebase` · `Groq (LLaMA 3.1)` · `Docker` · `Hugging Face Spaces`
 
-**Languages**  
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white)
+**Real-time safety & biometric monitoring (freelance project)**  
+A client was running PPE inspections manually. I fine-tuned YOLOv8 to autonomously detect PPE compliance and falls from a live video stream, then layered a C++ HOG-based biometric attendance system (`dlib`/`face_recognition`) directly on top of the same feed. The two systems share hardware resources without lag through an asynchronous daemon thread and a dynamic hardware-resource manager, and an in-memory RAM embedding cache gets facial authentication down to sub-30ms — eliminating the latency that typically comes with deep-learning-based recognition. Delivered and actively running in production for the client.  
+`Python` · `YOLOv8` · `C++` · `dlib` · `face_recognition` · `OpenCV`
 
-**Tools**  
-![Groq](https://img.shields.io/badge/Groq%20API-F55036?style=flat-square)
-![Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+**Automated code review that actually reads the code**  
+Fine-tuned LLaMA-3-8B with QLoRA/Unsloth to evaluate code submissions across 5 languages, served through a FastAPI backend. Delivered as a paid freelance project.  
+`Python` · `LLaMA-3` · `QLoRA/Unsloth` · `FastAPI`
+
+*Each of these started as someone's manual, repetitive problem — checking compliance by eye, translating sign language by hand, reviewing code line by line — and ended as a system that runs on its own.*
+
+### How I work
+
+I don't ship code I can't explain. Every project here I can walk through line by line — the architecture choices, why the model made a specific mistake, what I'd change with more time. If you're hiring or hiring out work, that's the difference between a demo and something you can actually rely on.
 
 ---
 
-### 🎥 Beyond code
+### Stack
 
-I run **[MindWired](#)** — a YouTube channel making AI/ML concepts accessible in Urdu for learners across Pakistan. Building in public, one video at a time.
-
-### 💬 Ask me about
-
-Computer Vision pipelines, sign language recognition systems, or how to actually *own* your code instead of just vibe-coding it.
-
----
-
-### 📫 Reach me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wasay-rabbani-147b4926b)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@MindWired_ai)
-[![Gmail](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:wasayrabbani69@gmail.com)
+**Vision:** YOLOv8 · OpenCV · MediaPipe Holistic · dlib · face_recognition  
+**Deep Learning / LLMs:** TensorFlow/Keras · PyTorch · BiLSTM · LLaMA-3 · QLoRA/Unsloth · Hugging Face  
+**Serving & Infra:** FastAPI · Flask · Docker · Hugging Face Spaces · Firebase  
+**Mobile:** Flutter  
+**Languages:** Python · C++ · Java · SQL
 
 ---
 
-<p align="center"><i>⚡ Currently open to AI/ML Engineering roles</i></p>
+### Beyond the code
+
+I run **[MindWired](https://www.youtube.com/@MindWired_ai)** on YouTube — AI/ML concepts explained in Urdu, for learners across Pakistan.
+
+---
+
+### Let's talk
+
+**Hiring?** → [LinkedIn](https://www.linkedin.com/in/wasay-rabbani-147b4926b) · [Email](mailto:wasayrabbani69@gmail.com)  
+**Have a project?** → [Email](mailto:wasayrabbani69@gmail.com), tell me what problem you're trying to solve
